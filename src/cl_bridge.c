@@ -680,13 +680,12 @@ __cl_bridge_load_symbols(void)
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
     CHECK((clBuildProgram = dlsym(lib, "clBuildProgram")) != NULL);
-    //CHECK((clCompileProgram = dlsym(lib, "clCompileProgram")) != NULL);
+    CHECK((clCompileProgram = dlsym(lib, "clCompileProgram")) != NULL);
     CHECK((clCreateBuffer = dlsym(lib, "clCreateBuffer")) != NULL);
     CHECK((clCreateCommandQueue = dlsym(lib, "clCreateCommandQueue")) != NULL);
-        //CHECK((clCreateCommandQueueWithPropertiesAPPLE = dlsym(lib, "clCreateCommandQueueWithPropertiesAPPLE")) != NULL);
     CHECK((clCreateContext = dlsym(lib, "clCreateContext")) != NULL);
     CHECK((clCreateContextFromType = dlsym(lib, "clCreateContextFromType")) != NULL);
-    //CHECK((clCreateImage = dlsym(lib, "clCreateImage")) != NULL);
+    CHECK((clCreateImage = dlsym(lib, "clCreateImage")) != NULL);
     CHECK((clCreateImage2D = dlsym(lib, "clCreateImage2D")) != NULL);
     CHECK((clCreateImage3D = dlsym(lib, "clCreateImage3D")) != NULL);
     CHECK((clCreateKernel = dlsym(lib, "clCreateKernel")) != NULL);
