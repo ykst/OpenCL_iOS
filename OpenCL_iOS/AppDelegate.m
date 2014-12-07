@@ -192,8 +192,6 @@ const char *KernelSource = KERNEL_STRING(
         free(build_log);
     }
 
-
-
     kernel = clCreateKernel(program, "copy", &err);
 
     cl_int count = 1024;
@@ -208,18 +206,15 @@ const char *KernelSource = KERNEL_STRING(
     ASSERT(input != NULL);
     ASSERT(output != NULL);
 
-    srand((unsigned) time(0));
-
-    
     cl_int *results = (cl_int *) malloc(bufflen);
     cl_int *data = (cl_int *) malloc(bufflen);
+
+    srand((unsigned) time(0));
     for(int i = 0; i < count; i++) {
         data[i] = rand();
     }
 
-    err = clEnqueueWriteBuffer(commands, input, CL_TRUE, 0, bufflen, data, 0, NULL, &event_upload);
-    CL_CHECK(err);
-
+    CL_CHECK(clEnqueueWriteBuffer(commands, input, CL_TRUE, 0, bufflen, data, 0, NULL, &event_upload));
     CL_CHECK(clSetKernelArg(kernel, 0, sizeof(cl_mem), &input));
     CL_CHECK(clSetKernelArg(kernel, 1, sizeof(cl_mem), &output));
     CL_CHECK(clSetKernelArg(kernel, 2, sizeof(cl_int), &count));
