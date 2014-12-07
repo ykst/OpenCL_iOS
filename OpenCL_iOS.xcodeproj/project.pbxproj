@@ -27,8 +27,6 @@
 		9839E1911A330BF7006817BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9839E1931A330BF7006817BF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9839E1961A330BF7006817BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		9839E1A11A330BF7006817BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9839E1A21A330BF7006817BF /* OpenCL_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenCL_iOSTests.m; sourceTree = "<group>"; };
 		9839E1E91A348E2E006817BF /* cl_bridge.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cl_bridge.c; path = src/cl_bridge.c; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -47,7 +45,6 @@
 			isa = PBXGroup;
 			children = (
 				9839E1851A330BF7006817BF /* OpenCL_iOS */,
-				9839E19F1A330BF7006817BF /* OpenCL_iOSTests */,
 				9839E1841A330BF7006817BF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,23 +78,6 @@
 			children = (
 				9839E1871A330BF7006817BF /* Info.plist */,
 				9839E1881A330BF7006817BF /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9839E19F1A330BF7006817BF /* OpenCL_iOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				9839E1A21A330BF7006817BF /* OpenCL_iOSTests.m */,
-				9839E1A01A330BF7006817BF /* Supporting Files */,
-			);
-			path = OpenCL_iOSTests;
-			sourceTree = "<group>";
-		};
-		9839E1A01A330BF7006817BF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9839E1A11A330BF7006817BF /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
