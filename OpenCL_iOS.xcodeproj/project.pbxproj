@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		9839E1891A330BF7006817BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9839E1881A330BF7006817BF /* main.m */; };
 		9839E18C1A330BF7006817BF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9839E18B1A330BF7006817BF /* AppDelegate.m */; };
-		9839E18F1A330BF7006817BF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9839E18E1A330BF7006817BF /* ViewController.m */; };
-		9839E1921A330BF7006817BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9839E1901A330BF7006817BF /* Main.storyboard */; };
 		9839E1941A330BF7006817BF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9839E1931A330BF7006817BF /* Images.xcassets */; };
 		9839E1971A330BF7006817BF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9839E1951A330BF7006817BF /* LaunchScreen.xib */; };
 		9839E1EA1A348E2E006817BF /* cl_bridge.c in Sources */ = {isa = PBXBuildFile; fileRef = 9839E1E91A348E2E006817BF /* cl_bridge.c */; };
@@ -22,9 +20,6 @@
 		9839E1881A330BF7006817BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9839E18A1A330BF7006817BF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9839E18B1A330BF7006817BF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9839E18D1A330BF7006817BF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9839E18E1A330BF7006817BF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9839E1911A330BF7006817BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9839E1931A330BF7006817BF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9839E1961A330BF7006817BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9839E1E91A348E2E006817BF /* cl_bridge.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cl_bridge.c; path = src/cl_bridge.c; sourceTree = SOURCE_ROOT; };
@@ -63,9 +58,6 @@
 				9839E1E91A348E2E006817BF /* cl_bridge.c */,
 				9839E18A1A330BF7006817BF /* AppDelegate.h */,
 				9839E18B1A330BF7006817BF /* AppDelegate.m */,
-				9839E18D1A330BF7006817BF /* ViewController.h */,
-				9839E18E1A330BF7006817BF /* ViewController.m */,
-				9839E1901A330BF7006817BF /* Main.storyboard */,
 				9839E1931A330BF7006817BF /* Images.xcassets */,
 				9839E1951A330BF7006817BF /* LaunchScreen.xib */,
 				9839E1861A330BF7006817BF /* Supporting Files */,
@@ -139,7 +131,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9839E1921A330BF7006817BF /* Main.storyboard in Resources */,
 				9839E1971A330BF7006817BF /* LaunchScreen.xib in Resources */,
 				9839E1941A330BF7006817BF /* Images.xcassets in Resources */,
 			);
@@ -152,7 +143,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9839E18F1A330BF7006817BF /* ViewController.m in Sources */,
 				9839E18C1A330BF7006817BF /* AppDelegate.m in Sources */,
 				9839E1891A330BF7006817BF /* main.m in Sources */,
 				9839E1EA1A348E2E006817BF /* cl_bridge.c in Sources */,
@@ -162,14 +152,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9839E1901A330BF7006817BF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9839E1911A330BF7006817BF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9839E1951A330BF7006817BF /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -323,6 +305,7 @@
 				9839E1A81A330BF7006817BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
