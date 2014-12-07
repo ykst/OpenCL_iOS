@@ -13,18 +13,8 @@
 		9839E1921A330BF7006817BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9839E1901A330BF7006817BF /* Main.storyboard */; };
 		9839E1941A330BF7006817BF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9839E1931A330BF7006817BF /* Images.xcassets */; };
 		9839E1971A330BF7006817BF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9839E1951A330BF7006817BF /* LaunchScreen.xib */; };
-		9839E1A31A330BF7006817BF /* OpenCL_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9839E1A21A330BF7006817BF /* OpenCL_iOSTests.m */; };
+		9839E1EA1A348E2E006817BF /* cl_bridge.c in Sources */ = {isa = PBXBuildFile; fileRef = 9839E1E91A348E2E006817BF /* cl_bridge.c */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		9839E19D1A330BF7006817BF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9839E17B1A330BF7006817BF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9839E1821A330BF7006817BF;
-			remoteInfo = OpenCL_iOS;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9839E1831A330BF7006817BF /* OpenCL_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCL_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,20 +27,13 @@
 		9839E1911A330BF7006817BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9839E1931A330BF7006817BF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9839E1961A330BF7006817BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		9839E19C1A330BF7006817BF /* OpenCL_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenCL_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9839E1A11A330BF7006817BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9839E1A21A330BF7006817BF /* OpenCL_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenCL_iOSTests.m; sourceTree = "<group>"; };
+		9839E1E91A348E2E006817BF /* cl_bridge.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cl_bridge.c; path = src/cl_bridge.c; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9839E1801A330BF7006817BF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9839E1991A330BF7006817BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -73,7 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				9839E1831A330BF7006817BF /* OpenCL_iOS.app */,
-				9839E19C1A330BF7006817BF /* OpenCL_iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +63,7 @@
 		9839E1851A330BF7006817BF /* OpenCL_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				9839E1E91A348E2E006817BF /* cl_bridge.c */,
 				9839E18A1A330BF7006817BF /* AppDelegate.h */,
 				9839E18B1A330BF7006817BF /* AppDelegate.m */,
 				9839E18D1A330BF7006817BF /* ViewController.h */,
@@ -139,24 +122,6 @@
 			productReference = 9839E1831A330BF7006817BF /* OpenCL_iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9839E19B1A330BF7006817BF /* OpenCL_iOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9839E1A91A330BF7006817BF /* Build configuration list for PBXNativeTarget "OpenCL_iOSTests" */;
-			buildPhases = (
-				9839E1981A330BF7006817BF /* Sources */,
-				9839E1991A330BF7006817BF /* Frameworks */,
-				9839E19A1A330BF7006817BF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9839E19E1A330BF7006817BF /* PBXTargetDependency */,
-			);
-			name = OpenCL_iOSTests;
-			productName = OpenCL_iOSTests;
-			productReference = 9839E19C1A330BF7006817BF /* OpenCL_iOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,10 +133,6 @@
 				TargetAttributes = {
 					9839E1821A330BF7006817BF = {
 						CreatedOnToolsVersion = 6.1;
-					};
-					9839E19B1A330BF7006817BF = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 9839E1821A330BF7006817BF;
 					};
 				};
 			};
@@ -189,7 +150,6 @@
 			projectRoot = "";
 			targets = (
 				9839E1821A330BF7006817BF /* OpenCL_iOS */,
-				9839E19B1A330BF7006817BF /* OpenCL_iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -205,13 +165,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9839E19A1A330BF7006817BF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -222,26 +175,11 @@
 				9839E18F1A330BF7006817BF /* ViewController.m in Sources */,
 				9839E18C1A330BF7006817BF /* AppDelegate.m in Sources */,
 				9839E1891A330BF7006817BF /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9839E1981A330BF7006817BF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9839E1A31A330BF7006817BF /* OpenCL_iOSTests.m in Sources */,
+				9839E1EA1A348E2E006817BF /* cl_bridge.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9839E19E1A330BF7006817BF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9839E1821A330BF7006817BF /* OpenCL_iOS */;
-			targetProxy = 9839E19D1A330BF7006817BF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9839E1901A330BF7006817BF /* Main.storyboard */ = {
@@ -283,7 +221,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -326,7 +264,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -345,9 +283,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/include",
+				);
 				INFOPLIST_FILE = OpenCL_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/IOKit.framework/Versions/A",
+					"$(PROJECT_DIR)/OpenCL_iOS",
+				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -355,43 +306,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/include",
+				);
 				INFOPLIST_FILE = OpenCL_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		9839E1AA1A330BF7006817BF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
+				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/IOKit.framework/Versions/A",
+					"$(PROJECT_DIR)/OpenCL_iOS",
 				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = OpenCL_iOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenCL_iOS.app/OpenCL_iOS";
-			};
-			name = Debug;
-		};
-		9839E1AB1A330BF7006817BF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = OpenCL_iOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenCL_iOS.app/OpenCL_iOS";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
@@ -412,14 +341,6 @@
 			buildConfigurations = (
 				9839E1A71A330BF7006817BF /* Debug */,
 				9839E1A81A330BF7006817BF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		9839E1A91A330BF7006817BF /* Build configuration list for PBXNativeTarget "OpenCL_iOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9839E1AA1A330BF7006817BF /* Debug */,
-				9839E1AB1A330BF7006817BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
